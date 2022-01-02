@@ -1,0 +1,147 @@
+Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: bs(),
+                  onPressed: () {},
+                  child: Wrap(
+                    children: <Widget>[
+                      Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 20.0,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("EKLE", style: TextStyle(fontSize: 20)),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: bs(),
+                  onPressed: () {},
+                  child: Wrap(
+                    children: <Widget>[
+                      Icon(
+                        Icons.delete,
+                        color: Colors.white,
+                        size: 20.0,
+                      ),
+                      SizedBox(
+                        width: 25,
+                      ),
+                      Text("SİL", style: TextStyle(fontSize: 20)),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: bs(),
+                  onPressed: () {},
+                  child: Wrap(
+                    children: <Widget>[
+                      Icon(
+                        Icons.list_alt,
+                        color: Colors.white,
+                        size: 20.0,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("LİSTE", style: TextStyle(fontSize: 20)),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            width: 400,
+            height: 200,
+            child: Center(
+              child: Text(
+                "FASON İŞLEMLERİ",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.greenAccent,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+
+
+
+          
+          Widget _myListView(BuildContext context) {
+    // backing data
+    final europeanCountries = [
+      'Albania',
+      'Andorra',
+      'Armenia',
+      'Austria',
+      'Azerbaijan',
+      'Belarus',
+      'Belgium',
+      'Bosnia and Herzegovina',
+      'Bulgaria',
+      'Croatia',
+      'Cyprus',
+      'Czech Republic',
+      'Denmark',
+      'Estonia',
+      'Finland',
+      'France',
+      'Georgia',
+      'Germany',
+      'Greece',
+      'Hungary',
+      'Iceland',
+      'Ireland',
+      'Italy',
+      'Kazakhstan',
+      'Kosovo',
+      'Latvia',
+      'Liechtenstein',
+      'Lithuania',
+      'Luxembourg',
+      'Macedonia',
+      'Malta',
+      'Moldova',
+      'Monaco',
+      'Montenegro',
+      'Netherlands',
+      'Norway',
+      'Poland',
+      'Portugal',
+      'Romania',
+      'Russia',
+      'San Marino',
+      'Serbia',
+      'Slovakia',
+      'Slovenia',
+      'Spain',
+      'Sweden',
+      'Switzerland',
+      'Turkey',
+      'Ukraine',
+      'United Kingdom',
+      'Vatican City'
+    ];
+
+    return ListView.builder(
+      itemCount: europeanCountries.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(europeanCountries[index]),
+        );
+      },
+    );
+  }
